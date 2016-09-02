@@ -1,14 +1,18 @@
 <!DOCTYPE html>
-<html ng-app="challengeApp">
+<html ng-app="myApp">
   <head>
     <meta charset="utf-8">
       <title>Hilarious!</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
+
         <script src = "./vendors/jquery.min.js "></script>
+        <script src = "./vendors/angular.min.js"></script>
         <script src = "./scripts/client.js" charset="utf-8"></script>
+        <script src = "./vendors/angular-route.js"></script>
+        <script src = "./vendors/angular-route.min.js"></script>
+        <!-- <script src = "./vendors/angular-route.min.js.map"></script> -->
 
         <script src="/scripts/controllers/addVideoController.js" type="text/javascript"></script>
-
         <script src="/scripts/controllers/homeController.js" type="text/javascript" ></script>
         <script src="/scripts/controllers/videoController.js" type="text/javascript" ></script>
         <script src="/scripts/controllers/loginController.js" type="text/javascript"></script>
@@ -16,20 +20,26 @@
 
         <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
         <link href="./vendors/sweetalert.css" rel="stylesheet">
-        
+
         <link href="./css/styles.css" type="text/css" rel="stylesheet">
 
 </head>
 
   <body>
-      <section id = "latest">
+
+      <section id = "newest">
           <h1>Did You See This One?</h1>
         <h3>Newest Videos</h3>
-
+        <div ng-controller="GreetingController">
+        {{ greeting }}</div>
       </section>
 
       <section id = "most_viewed">
         <h3>Most Views</h3>
+        <div ng-controller="Hello">
+          <p>The ID is {{video.id}}</p>
+          <p>The content is {{title.content}}</p>
+        </div>
 
 
       </section>
@@ -51,20 +61,6 @@
 
             </div>
   </section>
-   <script src="vendors/angular.js" charset="utf-8"></script>
-   <script src="./bower_components/angular/angular.min.js" type="text/javascript"></script>
-
-   <script src = "/vendors/angular-material.js" charset="utf-8"></script>
-
-   <script src="scripts/client.js" charset="utf-8"></script>
-
-   <script src="bower_components/sweetalert/dist/sweetalert.min.js"></script>
-   <script src="bower_components/jquery/dist/jquery.min.js" charset="utf-8"></script>
-
-
-
-   <!-- <script src="/vendors/ng-file-upload.min.js"></script>
-   <script src="/vendors/ng-file-upload-shim.min.js"></script> -->
 
 
 </body>
