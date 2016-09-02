@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html ng-app="challengeApp">
+  <head>
+    <meta charset="utf-8">
+      <title>Hilarious!</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src = "./vendors/jquery.min.js "></script>
+        <script src = "./scripts/client.js" charset="utf-8"></script>
+
+        <script src="/scripts/controllers/addVideoController.js" type="text/javascript"></script>
+
+        <script src="/scripts/controllers/homeController.js" type="text/javascript" ></script>
+        <script src="/scripts/controllers/videoController.js" type="text/javascript" ></script>
+        <script src="/scripts/controllers/loginController.js" type="text/javascript"></script>
+
+
+        <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+        <link href="./bower_components/sweetalert/dist/sweetalert.css" rel="stylesheet">
+        <link href="./bower_components/font-awesome/css/font-awesome.min.css" type="text/css" charset="utf-8" rel="stylesheet" >
+        <link href="./css/styles.css" type="text/css" rel="stylesheet">
+
+</head>
+
+  <body>
+      <section id = "latest">
+          <h1>Did You See This One?</h1>
+        <h3>Newest Videos</h3>
+
+      </section>
+
+      <section id = "most_viewed">
+        <h3>Most Views</h3>
+
+
+      </section>
+
+      <section id = "most_votes">
+        <h3>Most Votes</h3>
+
+      </section>
+
+<section id = "findFavorite">
+      <div>
+        <input type="text" placeholder="Video">
+            <button> Search for Video </button>
+            <h2>Your video:</h2>
+          </div>
+            <div class ="search in everySearch">
+              <!-- <img ng-src='{{search.posterURL}}' /> -->
+              <p>{{ search.title }}({{ search.slug }}), Number of Views: {{ search.view_tally }}</p>
+
+            </div>
+  </section>
+   <script src="vendors/angular.js" charset="utf-8"></script>
+   <script src="./bower_components/angular/angular.min.js" type="text/javascript"></script>
+
+   <script src = "/vendors/angular-material.js" charset="utf-8"></script>
+
+   <script src="scripts/client.js" charset="utf-8"></script>
+
+   <script src="bower_components/sweetalert/dist/sweetalert.min.js"></script>
+   <script src="bower_components/jquery/dist/jquery.min.js" charset="utf-8"></script>
+
+
+
+   <!-- <script src="/vendors/ng-file-upload.min.js"></script>
+   <script src="/vendors/ng-file-upload-shim.min.js"></script> -->
+
+
+</body>
+</html>

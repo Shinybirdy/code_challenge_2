@@ -1,9 +1,21 @@
-var myApp = angular.module( 'myApp', [] );
+console.log("hello from client.js");
+$(document).ready(function(){
+
+  $('#term').focus(function(){
+    var video = $("#id").has("created").length ? true : false;
+    if(video === false){
+      $("#id").empty();
+    }
+});
+
+var getVideo = function(){
+  //get video title and store in variable
+
+};
+});
 
 
-myApp.controller( 'VideoController',[ '$scope', '$http', function( $scope, $http ){
-// global list of video searches
-  $scope.everySearch=[];
+
 
 //displays JavaScript valus on HTML page
 function showResponse(response){
@@ -18,10 +30,10 @@ function onClientLoad(){
 }
 
 function onProofApiLoad(){
-  gapi.client.setApiKey("")
+  gapi.client.setApiKey("");
 }
   // test get user input
-  $scope.videoSearch = function(){
+  var videoSearch = function(){
 
     console.log( 'invideoSearch: ' + $scope.videoIn );
     // assemble API URL
@@ -53,6 +65,6 @@ function onProofApiLoad(){
     }); // end http, then
 
     // clear input field
-    $scope.videoIn='';
+  var videoIn='';
   };
 }]);
